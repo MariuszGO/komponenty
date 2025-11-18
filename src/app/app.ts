@@ -1,12 +1,13 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { syn } from './syn/syn';
+import { corka } from './corka/corka';
+
 
 @Component({
-  selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+selector: 'app-root',
+standalone: true,
+imports: [syn, corka],
+templateUrl: './app.html',
+ styleUrl: './app.css',
 })
-export class App {
-  protected readonly title = signal('rodzic');
-}
+export class App {}
